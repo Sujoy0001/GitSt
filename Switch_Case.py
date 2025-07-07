@@ -11,3 +11,5 @@ match value:
         print("You selected Three.")
     case _:
         print("Invalid selection.")
+
+print("Thank you for using this program.")  # extra line
