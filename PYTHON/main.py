@@ -19,6 +19,7 @@ def main():
         # 5. Check conditions
         if guess < number:
             print("Too low!")
+            print("next try")
         elif guess > number:
             print("Too high!")
         else:
