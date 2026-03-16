@@ -108,5 +108,5 @@ Get key 2: 20
 Contains key 11: 1
 After removing key 11:
 Bucket 1: [1=10]
-Bucket 2: [2=20]
+Bucket 2: [2=20] ok
 Bucket 3: [3=40]
