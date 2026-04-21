@@ -1,4 +1,4 @@
-lprint("hello world")
+oilprint("hello world")
 print("Hai")
 print("date: 23/07/2025")
 print("date: 04/08/2025")
@@ -57,5 +57,5 @@ print("date: 07/02/2026")
 print("date: 10/02/2026")
 print("date: 26/02/2026")
 print("date: 18/02/2026")
-bajjdvvdgdhhd
+bajjdvvdgdhhdhhjh
 ghhjkv hhfuk jiht
