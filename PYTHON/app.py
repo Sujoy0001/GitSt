@@ -1,61 +1,28 @@
-gvgvgvbcgcrm nm bnmbnhjmfgghgccfcgdgdfghhgdgjjjsjjssjbbboilprint("hello world")
-print("Hai")
-print("date: 23/07/2025")
-print("date: 04/08/2025")
-print("date: 06/08/2025")
-print("date: 07/08/2025")
-print("date: 08/08/2025")
-print("date: 10/08/2025")
-print("date: 11/08/2025" + "Happy birthday")
-print("date: 12/08/2025")
-print("date: 13/08/2025")
-print("date: 14/08/2025")
-print("date: 15/08/2025" + "79th Happy Independence Day")
-print("date: 20/08/2025")
-print("date: 21/08/2025")
-print("date: 23/08/2025")
-print("date: 26/08/2025")
-print("date: 01/09/2025")
-print("date: 05/09/2025")
-print("date: 06/09/2025")
-print("date: 07/09/2025")
-print("date: 15/01/2026")
-print("date: 11/09/2025")
-print("date: 16/09/2025")
-print("date: 19/09/2025")
-print("date: 22/09/2025")
-print("date: 23/09/2025")
-print("date: 28/09/2025" + "Puja start")
-print("date: 01/10/2025")
-print("date: 02/10/2025")
-print("date: 10/10/2025")
-print("date: 14/10/2025")
-print("date: 02/11/2025' + "Devfest durgapur 2025")
-print("date: 05/11/2025")
-print("date: 06/11/2025")
-print("date: 19/11/2025")
-print("date: 04/12/2025")
-print("date: 16/12/2025")
-print("date: 20/12/2025")
-print("date: 23/12/2025")
-print("date: 25/12/2025")
-print("date: 30/12/2025")
-print("date: 31/12/2025" + "End of this year") 
-print("date: 01/01/2026" + "Happy New year 🎊")
-print("date: 10/01/2026")
-print("date: 11/01/2026")
-print("date: 13/01/2026")
-print("date: 14/01/2026")
-print("date: 15/01/2026")
-print("date: 16/01/2026")
-print("date: 18/01/2026")
-print("date: 19/01/2026")
-print ("date: 20/01/2026")
-print("date: 26/01/2026")
-print("date: 28/01/2026")
-print("date: 07/02/2026")
-print("date: 10/02/2026")
-print("date: 26/02/2026")
-print("date: 18/02/2026")
-bajjdvvdgdhhdhhjh
-ghhjkv hhfuk jihtdfvfggh
+def findMedianSortedArrays(nums1, nums2):
+    A, B = nums1, nums2
+    total = len(A) + len(B)
+    half = total // 2
+
+    if len(B) < len(A):
+        A, B = B, A
+
+    l, r = 0, len(A) - 1
+
+    while True:
+        i = (l + r) // 2
+        j = half - i - 2
+
+        Aleft = A[i] if i >= 0 else float("-infinity")
+        Aright = A[i + 1] if (i + 1) < len(A) else float("infinity")
+        Bleft = B[j] if j >= 0 else float("-infinity")
+        Bright = B[j + 1] if (j + 1) < len(B) else float("infinity")
+
+        if Aleft <= Bright and Bleft <= Aright:
+            if total % 2:
+                return min(Aright, Bright)
+            return (max(Aleft, Bleft) + min(Aright, Bright)) / 2
+
+        elif Aleft > Bright:
+            r = i - 1
+        else:
+            l = i + 1
