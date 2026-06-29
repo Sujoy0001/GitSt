@@ -1,0 +1,62 @@
+def paginate(data, page_number, page_size):
+    """
+    Slices a list of data to simulate pagination.
+    
+    :param data: The complete list of items
+    :param page_number: The current page requested (1-indexed)
+    :param page_size: How many items to display per page
+    :return: A dictionary containing the paginated data and metadata
+    """
+    # Calculate total pages
+    # Uses a quick trick to round up division without importing the math module
+    total_items = len(data)
+    total_pages = (total_items + page_size - 1) // page_size
+
+    # Ensure page_number stays within valid boundaries
+    if page_number < 1:
+        page_number = 1
+    elif page_number > total_pages and total_pages > 0:
+        page_number = total_pages
+
+    # Calculate start and end indices for slicing the list
+    start_index = (page_number - 1) * page_size
+    end_index = start_index + page_size
+
+    # Slice the data for the current page
+    paginated_items = data[start_index:end_index]
+
+    # Return results alongside helpful pagination metadata
+    return {
+        "current_page": page_number,
+        "page_size": page_size,
+        "total_items": total_items,
+        "total_pages": total_pages,
+        "has_next": page_number < total_pages,
+        "has_previous": page_number > 1,
+        "data": paginated_items
+    }
+
+
+# --- Example Usage ---
+if __name__ == "__main__":
+    # 1. Create a dummy dataset (e.g., 25 items)
+    mock_database = [f"Item {i}" for i in range(1, 26)]
+    
+    # 2. Define pagination parameters
+    PAGE_SIZE = 5
+    
+    # 3. Simulate fetching different pages
+    print("--- Fetching Page 1 ---")
+    page_1 = paginate(mock_database, page_number=1, page_size=PAGE_SIZE)
+    print(f"Items: {page_1['data']}")
+    print(f"Has Next Page? {page_1['has_next']}\n")
+
+    print("--- Fetching Page 3 ---")
+    page_3 = paginate(mock_database, page_number=3, page_size=PAGE_SIZE)
+    print(f"Items: {page_3['data']}")
+    print(f"Has Next Page? {page_3['has_next']}\n")
+    
+    print("--- Fetching Page 5 (Last Page) ---")
+    page_5 = paginate(mock_database, page_number=5, page_size=PAGE_SIZE)
+    print(f"Items: {page_5['data']}")
+    print(f"Has Next Page? {page_5['has_next']}")
