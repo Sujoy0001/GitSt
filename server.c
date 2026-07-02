@@ -85,3 +85,5 @@ int main() {
     return 0;
 }
 run server.c
+
+it's want a client side code for text this... run both and connect .. then you can chat.
