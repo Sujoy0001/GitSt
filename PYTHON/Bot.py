@@ -19,5 +19,5 @@ def trap(height):
             else:
                 res += rightMax - height[r]
             r -= 1
-
+vhj
     return res
