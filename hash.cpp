@@ -100,7 +100,7 @@ int main() {
 - **Operations** — `insert`, `get`, `remove`, `contains` all run in O(1) average, O(n) worst case
 
 **Output:**
-```
+``````
 Bucket 1: [1=10] [11=30]
 Bucket 2: [2=20]
 Bucket 3: [3=40]
