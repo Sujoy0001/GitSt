@@ -21,3 +21,4 @@ def trap(height):
             r -= 1
 vhj
     return res
+// print the return values 
