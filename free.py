@@ -7,3 +7,4 @@ hhjs## leet code day 19 july
 24 aug - college exam 
 28 aug - tried 
 31 aug - over work 
+06 sep - over time sleep 
