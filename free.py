@@ -8,3 +8,4 @@ hhjs## leet code day 19 july
 28 aug - tried 
 31 aug - over work 
 06 sep - over time sleep 
+10 sep - college work 
