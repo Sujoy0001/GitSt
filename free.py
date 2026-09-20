@@ -10,4 +10,4 @@ hhjs## leet code day 19 july
 06 sep - over time sleep 
 10 sep - college work 
 13 sep - waste same
-19 sep - medical leave 
+19 sep - medical leave +1
